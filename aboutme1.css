@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  margin:0;
+  display:box;
+  height:100vh;
+  width:100%;
+  background-position:center;
+  background-size:cover;
+    overflow: scroll;
+  background-attachment: fixed;
+  
+}
+
+
+nav{
+  display: flex;
+
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  color:white;
+  animation-name: xyz;
+  animation-duration: 10s;
+  animation-delay: 2s;
+
+
+}
+@keyframes xyz {
+ 0% {color: yellow;}
+ 25% {color: lightblue;}
+ 75% {color: red;}
+ 100% {color: orange;}
+}
+
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    background-attachment: fixed;
+
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+    
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+
+@keyframes xyz {
+ 0% {color: red;}
+ 25% {color: yellow;}
+ 75% {color: lightblue;}
+ 100% {color: gray;}
+}
+
+
+@media screen and (max-width:740px)
+{
+  nav{
+  
+  height: 60px;
+ }
+nav .logo{
+ 
+  font-size: 25px;
+  
+}
+nav ul{
+    top: 60px;
+    z-index: 2;
+    }
+
+
+}
+
+
+.bg{
+  display: box;
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('blur.jpg');
+  background-position: center;
+  height:100%;
+  width:auto;
+  margin:0;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h1{
+  position:relative;
+  font-family:arial;
+  font-size:3em;
+  font-weight: 700;
+  color:white;
+  text-align: center;
+  overflow:hidden;
+  margin:auto;
+  transform:translateY(60px);
+}
+
+.about{
+  margin:auto;
+  width:80%;
+  border-top:1px solid gray;
+  box-sizing:border-box;
+  text-align:center;
+  padding:10px;
+  transform:translateY(100px);
+
+}
+
+
+.para{
+  font-size:25px;
+  
+  font-family:comic sans MS;
+  color:white;
+  text-align:justify;
+  text-indent:40px;
+  padding:10px 20px;
+}
+
+@media screen and (max-width: 780px)
+{
+  h1{
+    font-size:45px;
+  }
+  .para{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 540px)
+{
+  h1{
+    font-size: 35px;
+  }
+  .para{
+    font-size: 15px
+  }
+  nav{
+   // position:fixed;
+  }
+  nav ul{
+    top: 60px;
+    z-index: 2;
+    overflow:scroll;
+    }
+}
+@media screen and (max-height: 400px)
+{
+  
+  h1{
+    font-size: 30px;
+
+  }
+  .para{
+    font-size: 20px;
+  }
+
+  nav ul{
+    top: 60px;
+    z-index:2;
+    overflow:scroll;
+
+    }
+  nav ul li a{
+  
+  font-size: 15px;
+  font-weight: 500;
+  padding: 4px 15px;
+  
+}
+#click:checked ~ .bg
+{
+overflow: hidden;
+background-attachment: fixed;
+
+}
+
+
+
+}
